@@ -151,6 +151,66 @@
       color: var(--gold);
     }
 
+    .focus-strip {
+      overflow: hidden;
+      border-bottom: 1px solid rgb(12 35 63 / 18%);
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .focus-track {
+      display: flex;
+      width: max-content;
+      animation: focus-scroll 38s linear infinite;
+    }
+
+    .focus-strip:hover .focus-track,
+    .focus-strip:focus .focus-track {
+      animation-play-state: paused;
+    }
+
+    .focus-strip:focus-visible {
+      outline: 3px solid var(--navy);
+      outline-offset: -4px;
+    }
+
+    .focus-group {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: space-around;
+      gap: 2rem;
+      min-width: 100vw;
+      margin: 0;
+      padding: 0.85rem 2rem;
+      list-style: none;
+    }
+
+    .focus-group li {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 2rem;
+      color: var(--navy);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .focus-group li::after {
+      color: var(--white);
+      content: "•";
+      font-size: 1.25rem;
+    }
+
+    @keyframes focus-scroll {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
     h1,
     h2,
     h3,
@@ -455,6 +515,44 @@
       html {
         scroll-behavior: auto;
       }
+
+      .focus-track {
+        animation: none;
+      }
+
+      .focus-group[aria-hidden="true"] {
+        display: none;
+      }
+
+      .focus-group {
+        flex-wrap: wrap;
+        justify-content: center;
+        min-width: 100%;
+      }
+    }
+
+    @media (hover: none) {
+      .focus-track {
+        animation: none;
+      }
+
+      .focus-group[aria-hidden="true"] {
+        display: none;
+      }
+
+      .focus-group {
+        justify-content: flex-start;
+        min-width: 100%;
+      }
+
+      .focus-strip {
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .focus-strip::-webkit-scrollbar {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -489,6 +587,27 @@
         </div>
       </div>
     </section>
+
+    <div class="focus-strip" role="region" aria-label="CWF priorities and ways to support wrestlers" tabindex="0">
+      <div class="focus-track">
+        <ul class="focus-group">
+          <li>Skills &amp; character</li>
+          <li>Equipment &amp; training</li>
+          <li>Tournament travel</li>
+          <li>Meals &amp; lodging</li>
+          <li>Team experiences</li>
+          <li>Volunteer opportunities</li>
+        </ul>
+        <ul class="focus-group" aria-hidden="true">
+          <li>Skills &amp; character</li>
+          <li>Equipment &amp; training</li>
+          <li>Tournament travel</li>
+          <li>Meals &amp; lodging</li>
+          <li>Team experiences</li>
+          <li>Volunteer opportunities</li>
+        </ul>
+      </div>
+    </div>
 
     <section id="mission" aria-labelledby="mission-title">
       <div class="wrap split">
