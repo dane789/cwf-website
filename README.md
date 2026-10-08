@@ -2,6 +2,8 @@
 
 This is a static website for the independent Crusader Wrestling Foundation (CWF). The homepage and inline styles are in `index.html`; `favicon.svg` uses the crest in `cwf_logo.jpg`, and `cwf_gold_out_shirt.jpg` is the fundraiser shirt preview.
 
+The homepage focus strip pauses on hover or keyboard focus, allows swipe scrolling on touch devices, and stays still for visitors who prefer reduced motion.
+
 ## Local preview
 
 The site has no build step or package dependencies. From this directory, start a local server with:
