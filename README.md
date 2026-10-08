@@ -19,5 +19,7 @@ GitHub Pages serves the repository root from the `main` branch.
 ## Content guardrails
 
 - Keep CWF presented as an independent organization. Do not imply school affiliation or publish school-specific fundraising, payment, or team contact details.
-- Do not claim 501(c)(3) status or tax-deductible donations until confirmed.
-- Add the legal name, EIN, public contact details, address or service area, domain, donation instructions, and sponsorship details only after they are confirmed and approved for public use.
+- CWF is a Pennsylvania nonprofit corporation seeking IRS recognition under section 501(c)(3); do not describe tax-exempt status as approved or promise tax deductibility before an IRS determination.
+- Do not publish the EIN, personal officer details, or a registered address without explicit approval for public use.
+- Add public contact details, address or service area, domain, donation instructions, and sponsorship details only after they are confirmed and approved for public use.
+- Do not imply school affiliation or publish school-specific fundraising, payment, or team contact details.
