@@ -1,24 +1,540 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crusaders Wrestling Foundation | Beyond the Mat</title>
-<meta name="description" content="Supporting wrestling student-athletes through opportunities to build skills, character, confidence, and leadership.">
-<style>
-:root{--navy:#0C233F;--gold:#A39260;--paper:#f6f4ed;--ink:#172839}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}a{color:inherit}a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:5px}.skip{position:absolute;left:12px;top:-80px;background:white;padding:12px;z-index:9}.skip:focus{top:12px}.wrap{width:min(1140px,90%);margin:auto}header{background:var(--navy);color:white;border-bottom:1px solid #ffffff22}nav{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:22px 0}.brand{text-decoration:none;display:flex;align-items:center;gap:13px}.mark{border:1px solid var(--gold);padding:6px 10px;font-weight:bold;color:#A39260;letter-spacing:2px}.brand span:last-child{font-size:12px;line-height:1.4;letter-spacing:1px;text-transform:uppercase}.links{display:flex;gap:25px;flex-wrap:wrap;font-size:14px}.links a{text-decoration:none}.links a:hover{text-decoration:underline}.hero{background:var(--navy);color:white;padding:85px 0 95px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:70px}.eyebrow{text-transform:uppercase;font-size:12px;font-weight:bold;letter-spacing:2.5px;color:var(--gold);margin:0 0 20px}.hero .eyebrow{color:#A39260}h1{font-size:clamp(48px,7vw,88px);line-height:1.04;letter-spacing:-3px;margin:0 0 25px;max-width:800px}h1 em{font-style:normal;color:#A39260}.intro{font-size:18px;max-width:560px;color:#d8dfe8}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.button{display:inline-block;text-decoration:none;padding:13px 23px;font-size:14px;font-weight:bold;background:var(--gold);color:var(--navy);border:1px solid var(--gold)}.button.outline{background:transparent;border-color:#a3afbd;color:white}.button:hover{filter:brightness(1.1)}.mat{aspect-ratio:1;border:1px solid #ffffff24;position:relative;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#ffffff06,transparent 70%)}.mat:before{content:'';position:absolute;inset:13%;border:2px solid var(--gold);border-radius:50%}.mat:after{content:'';position:absolute;width:38%;height:12%;border-left:3px solid white;border-right:3px solid white;opacity:.5}.mat-label{position:absolute;bottom:4%;font-size:11px;letter-spacing:3px;color:#A39260}.strip{background:var(--gold);color:var(--navy);padding:18px 0;font-size:12px;text-transform:uppercase;font-weight:bold;letter-spacing:2px}.strip .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}section{padding:85px 0}h2{font-size:clamp(30px,4vw,48px);line-height:1.16;letter-spacing:-1px;margin:0 0 24px}h3{line-height:1.3}p{margin:0 0 18px}.split{display:grid;grid-template-columns:1fr 1.4fr;gap:70px}.mission{font-size:21px}.small{font-size:14px;color:#536170}.support{background:white}.section-lead{max-width:650px;margin-bottom:35px}.priorities{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.priority{border-top:3px solid var(--gold);padding-top:20px}.number{font-size:12px;letter-spacing:2px;color:#68727c}.sponsorships{margin-top:38px;border-top:1px solid #d5d7d8}.sponsorships details{border-bottom:1px solid #d5d7d8;padding:20px 0}.sponsorships summary{cursor:pointer;font-size:19px;font-weight:bold}.sponsorships summary span{float:right;color:#736238;margin-right:25px}.sponsorships ul{padding-left:22px;margin-top:18px;max-width:850px}.note{background:var(--paper);padding:24px;margin-top:28px;border-left:3px solid var(--gold)}.involved{background:var(--navy);color:white}.involved .small{color:#c8d2df}.roles{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:35px}.role{border-top:1px solid #ffffff30;padding-top:15px}.role h3{margin:0 0 8px}.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:70px}.contact-box{border:1px solid #d7d3c8;padding:28px;background:white}.contact-box a{overflow-wrap:anywhere}footer{background:var(--navy);color:#ced6df;padding:30px 0;font-size:12px}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}@media(max-width:760px){nav{align-items:flex-start;flex-direction:column;gap:20px}.links{gap:18px}.hero{padding:55px 0 65px}.hero-grid,.split,.contact{grid-template-columns:1fr;gap:28px}.mat{display:none}h1{letter-spacing:-2px}.priorities{grid-template-columns:1fr}.roles{grid-template-columns:1fr}section{padding:55px 0}.sponsorships summary{font-size:16px}.sponsorships summary span{margin-right:8px}.mission{font-size:19px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.brand-logo{width:64px;height:64px;object-fit:cover;object-position:center;border-radius:50%}.hero-crest{width:100%;max-width:400px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:white;justify-self:center}.hero-crest img{width:100%;height:100%;object-fit:cover;object-position:center}@media(max-width:760px){.hero-crest{max-width:240px;grid-row:2}.brand-logo{width:54px;height:54px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Crusaders Wrestling Foundation supports student-athletes through opportunities to build skills, character, confidence, and leadership.">
+  <title>Crusaders Wrestling Foundation | Built on the Mat. Ready for Life.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #0C233F;
+      --gold: #A39260;
+      --paper: #f6f4ed;
+      --ink: #172839;
+      --muted: #536170;
+      --white: #fff;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 1.5rem;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -5rem;
+      left: 1rem;
+      z-index: 1;
+      padding: 0.75rem 1rem;
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .wrap {
+      width: min(1140px, 90%);
+      margin-inline: auto;
+    }
+
+    .site-header,
+    .hero,
+    .involved,
+    footer {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .site-header {
+      border-bottom: 1px solid rgb(255 255 255 / 14%);
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.75rem;
+      padding-block: 1.25rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .brand-name {
+      font-size: 0.75rem;
+      line-height: 1.4;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.875rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+
+    .hero {
+      overflow: hidden;
+      padding-block: 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      margin: 0 0 1.25rem;
+      color: var(--navy);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hero .eyebrow,
+    .involved .eyebrow {
+      color: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin-bottom: 1.5rem;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+    }
+
+    h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.16;
+      letter-spacing: -0.03em;
+    }
+
+    h3 {
+      line-height: 1.3;
+    }
+
+    .intro {
+      max-width: 560px;
+      color: #d8dfe8;
+      font-size: 1.125rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.875rem;
+      margin-top: 1.75rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1.4rem;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      filter: brightness(1.08);
+    }
+
+    .button:focus-visible {
+      outline-color: var(--white);
+    }
+
+    .button-outline {
+      border-color: #a3afbd;
+      background: transparent;
+      color: var(--white);
+    }
+
+    .values {
+      padding-block: 1rem;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .values .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.9rem;
+    }
+
+    section {
+      padding-block: 5rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 4rem;
+    }
+
+    .mission {
+      font-size: 1.3rem;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .involved .small {
+      color: #c8d2df;
+    }
+
+    .support {
+      background: var(--white);
+    }
+
+    .section-lead {
+      max-width: 650px;
+      margin-bottom: 2.25rem;
+    }
+
+    .priorities {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.875rem;
+    }
+
+    .priority {
+      padding-top: 1.25rem;
+      border-top: 3px solid var(--gold);
+    }
+
+    .number {
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+    }
+
+    .note {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-left: 3px solid var(--gold);
+      background: var(--paper);
+    }
+
+    .note h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .note p {
+      margin-bottom: 0;
+    }
+
+    .roles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .role {
+      padding-top: 1rem;
+      border-top: 1px solid rgb(255 255 255 / 20%);
+    }
+
+    .role h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .role-summary {
+      margin-top: 1.5rem;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-box {
+      padding: 1.75rem;
+      border: 1px solid #d7d3c8;
+      background: var(--white);
+    }
+
+    .contact-box h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-box p {
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding-block: 1.75rem;
+      color: #ced6df;
+      font-size: 0.75rem;
+    }
+
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 760px) {
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .nav-links {
+        gap: 1.1rem;
+      }
+
+      .hero {
+        padding-block: 3.5rem;
+      }
+
+      .hero-grid,
+      .split,
+      .contact {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      h1 {
+        letter-spacing: -0.03em;
+      }
+
+      section {
+        padding-block: 3.5rem;
+      }
+
+      .priorities,
+      .roles {
+        grid-template-columns: 1fr;
+      }
+
+      .mission {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="#"><img class="brand-logo" src="cwf_logo.jpg" alt="CWF crest" width="64" height="64"><span>Crusaders<br>Wrestling Foundation</span></a><div class="links"><a href="#mission">Our mission</a><a href="#support">Sponsorships</a><a href="#involved">Get involved</a><a href="#contact">Contact</a></div></nav></header>
-<main id="main">
-<div class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Faith · Opportunity · Leadership</p><h1>Built on the mat.<br><em>Ready for life.</em></h1><p class="intro">A community behind our wrestlers. The Crusaders Wrestling Foundation helps student-athletes grow in skills, character, confidence, and leadership—on and off the mat.</p><div class="actions"><a class="button" href="#support">Support the Crusaders</a><a class="button outline" href="#involved">Be part of the team</a></div></div><div class="hero-crest"><img src="cwf_logo.jpg" alt="Crusaders Wrestling Foundation circular crest with a cross" width="460" height="460"></div></div></div>
-<div class="strip"><div class="wrap"><span>Faith</span><span>Opportunity</span><span>Leadership</span></div></div>
-<section id="mission"><div class="wrap split"><div><p class="eyebrow">Our purpose</p><h2>Supporting wrestlers.<br>Building futures.</h2></div><div><p class="mission">Our mission is to support our wrestling program and student-athletes by helping create opportunities to develop skills, character, confidence, and leadership both on and off the mat.</p><p>Preparing student-athletes for success in wrestling and, more importantly, for life beyond the sport.</p><p class="small">CWF is an independent nonprofit organization that brings parents, guardians, alumni, and community supporters together to support wrestling student-athletes.</p></div></div></section>
-<section class="support" id="support"><div class="wrap"><p class="eyebrow">Support the Crusaders · 2026–27</p><h2>Your support goes with them.</h2><p class="section-lead">Equipment, travel, meals, and lodging help our wrestlers make the most of training and competition. Every sponsor helps support those opportunities.</p><div class="priorities"><article class="priority"><span class="number">01 / PREPARATION</span><h3>Equipment &amp; training</h3><p>Help provide the resources student-athletes need to prepare and compete.</p></article><article class="priority"><span class="number">02 / COMPETITION</span><h3>Travel &amp; tournament support</h3><p>Support travel, meals, and overnight stays for training and competitions.</p></article><article class="priority"><span class="number">03 / COMMUNITY</span><h3>Team experiences</h3><p>Bring families together around tournament food, Senior Night, and the team banquet.</p></article></div>
-<div class="note"><h3 style="margin-top:0">Support through CWF</h3><p style="margin-bottom:0">Businesses, families, and community members can help advance CWF's mission through sponsorships, fundraising, and volunteer support. CWF donation instructions and sponsorship details will be shared here when available.</p></div></div></section>
-<section class="involved" id="involved"><div class="wrap split"><div><p class="eyebrow">There is a place for you</p><h2>A strong team starts with its community.</h2><p>Parents, guardians, alumni, and friends can help create a better season for our wrestlers.</p></div><div><div class="roles"><article class="role"><h3>Food &amp; hospitality</h3><p class="small">Help coordinate tournament meals and support athletes during team events.</p></article><article class="role"><h3>Fundraising</h3><p class="small">Help with fundraising activities and connect the program with community sponsors.</p></article><article class="role"><h3>Senior Night &amp; banquet</h3><p class="small">Help celebrate our wrestlers and the families behind them.</p></article><article class="role"><h3>Travel &amp; logistics</h3><p class="small">Lend a hand with the details that keep team experiences running smoothly.</p></article></div><p class="small" style="margin-top:25px">CWF brings volunteers together to support student-athletes and create meaningful experiences on and off the mat.</p></div></div></section>
-<section id="contact"><div class="wrap contact"><div><p class="eyebrow">Stay connected</p><h2>Help support the next chapter.</h2><p>Have an idea to help wrestling student-athletes? CWF welcomes families, alumni, businesses, and community supporters who share our mission.</p><a class="button" href="#involved">Explore ways to help</a></div><div class="contact-box"><h3 style="margin-top:0">CWF updates</h3><p style="margin-bottom:0">Foundation contact details, upcoming activities, and ways to contribute will be posted here as they become available.</p></div></div></section>
-</main><footer><div class="wrap"><span>Crusaders Wrestling Foundation · Independent nonprofit organization</span><a href="#mission">Skills. Character. Confidence. Leadership.</a></div></footer>
-</body></html>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#main" aria-label="Crusaders Wrestling Foundation home">
+        <img class="brand-logo" src="cwf_logo.jpg" alt="Crusaders Wrestling Foundation crest" width="64" height="64">
+        <span class="brand-name">Crusaders<br>Wrestling Foundation</span>
+      </a>
+      <div class="nav-links">
+        <a href="#mission">Our mission</a>
+        <a href="#support">Sponsorships</a>
+        <a href="#involved">Get involved</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Faith • Opportunity • Leadership</p>
+          <h1 id="hero-title">Built on the mat.<br><em>Ready for life.</em></h1>
+          <p class="intro">A community behind our wrestlers. The Crusaders Wrestling Foundation helps student-athletes grow in skills, character, confidence, and leadership—on and off the mat.</p>
+          <div class="actions">
+            <a class="button" href="#support">Support the Crusaders</a>
+            <a class="button button-outline" href="#involved">Be part of the team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="values" role="group" aria-label="Foundation values">
+      <div class="wrap">
+        <span>Faith</span>
+        <span>Opportunity</span>
+        <span>Leadership</span>
+      </div>
+    </div>
+
+    <section id="mission" aria-labelledby="mission-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Our purpose</p>
+          <h2 id="mission-title">Supporting wrestlers.<br>Building futures.</h2>
+        </div>
+        <div>
+          <p class="mission">Our mission is to support our wrestling program and student-athletes by helping create opportunities to develop skills, character, confidence, and leadership both on and off the mat. Preparing student-athletes for success in wrestling and, more importantly, for life beyond the sport.</p>
+          <p class="small">CWF is an independent nonprofit organization that brings parents, guardians, alumni, and community supporters together to support wrestling student-athletes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support" aria-labelledby="support-title">
+      <div class="wrap">
+        <p class="eyebrow">Support the Crusaders · 2026–27</p>
+        <h2 id="support-title">Your support goes with them.</h2>
+        <p class="section-lead">Equipment, travel, meals, and lodging help our wrestlers make the most of training and competition. Every sponsor helps support those opportunities.</p>
+
+        <div class="priorities">
+          <article class="priority">
+            <span class="number">01 / PREPARATION</span>
+            <h3>Equipment &amp; training</h3>
+            <p>Help provide the resources student-athletes need to prepare and compete.</p>
+          </article>
+          <article class="priority">
+            <span class="number">02 / COMPETITION</span>
+            <h3>Travel &amp; tournament support</h3>
+            <p>Support travel, meals, and overnight stays for training and competitions.</p>
+          </article>
+          <article class="priority">
+            <span class="number">03 / COMMUNITY</span>
+            <h3>Team experiences</h3>
+            <p>Bring families together around tournament food, Senior Night, and the team banquet.</p>
+          </article>
+        </div>
+
+        <aside class="note" aria-label="Ways to support CWF">
+          <h3>Support through CWF</h3>
+          <p>Businesses, families, and community members can help advance CWF's mission through sponsorships, fundraising, and volunteer support. CWF donation instructions and sponsorship details will be shared here when available.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="involved" id="involved" aria-labelledby="involved-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">There is a place for you</p>
+          <h2 id="involved-title">A strong team starts with its community.</h2>
+          <p>Parents, guardians, alumni, and friends can help create a better season for our wrestlers.</p>
+        </div>
+        <div>
+          <div class="roles">
+            <article class="role">
+              <h3>Food &amp; hospitality</h3>
+              <p class="small">Help coordinate tournament meals and support athletes during team events.</p>
+            </article>
+            <article class="role">
+              <h3>Fundraising</h3>
+              <p class="small">Help with fundraising activities and connect the program with community sponsors.</p>
+            </article>
+            <article class="role">
+              <h3>Senior Night &amp; banquet</h3>
+              <p class="small">Help celebrate our wrestlers and the families behind them.</p>
+            </article>
+            <article class="role">
+              <h3>Travel &amp; logistics</h3>
+              <p class="small">Lend a hand with the details that keep team experiences running smoothly.</p>
+            </article>
+          </div>
+          <p class="small role-summary">CWF brings volunteers together to support student-athletes and create meaningful experiences on and off the mat.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact">
+        <div>
+          <p class="eyebrow">Stay connected</p>
+          <h2 id="contact-title">Help support the next chapter.</h2>
+          <p>Have an idea to help wrestling student-athletes? CWF welcomes families, alumni, businesses, and community supporters who share our mission.</p>
+          <a class="button" href="#involved">Explore ways to help</a>
+        </div>
+        <div class="contact-box">
+          <h3>Official CWF details</h3>
+          <p>Public contact information, upcoming activities, and ways to contribute will be added here as they are confirmed.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Crusaders Wrestling Foundation · Independent nonprofit organization</span>
+      <a href="#mission">Skills. Character. Confidence. Leadership.</a>
+    </div>
+  </footer>
+</body>
+</html>
