@@ -125,17 +125,19 @@
 
     .hero {
       overflow: hidden;
-      padding-block: 5rem;
+      padding-block: clamp(4rem, 8vw, 7rem);
+      background-image: linear-gradient(115deg, var(--navy) 0%, var(--navy) 65%, #142e4d 100%);
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, 0.55fr); align-items: center; gap: clamp(2rem, 7vw, 6rem); }
 
     .hero-copy {
       max-width: 800px;
     }
+
+    .hero-aside { padding: 1.5rem 0 1.5rem 1.75rem; border-left: 2px solid var(--gold); color: #d8dfe8; }
+    .hero-aside strong { display: block; margin-bottom: 0.55rem; color: var(--white); font-size: 1.1rem; }
+    .hero-aside p { margin-bottom: 0; font-size: 0.95rem; }
 
     .eyebrow {
       margin: 0 0 1.25rem;
@@ -307,9 +309,11 @@
       background: var(--white);
     }
 
-    .governance {
-      background: var(--paper);
-    }
+    .section-head { max-width: 720px; margin-bottom: 2.5rem; }
+    .section-head .section-lead { margin-bottom: 0; }
+
+    .governance { background: #eeece4; }
+    .governance-intro { max-width: 800px; }
 
     .officers {
       display: grid;
@@ -342,18 +346,31 @@
 
     .status-note {
       margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid var(--gold);
+      background: var(--white);
     }
 
     .priorities {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.875rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
     }
 
     .priority {
-      padding-top: 1.25rem;
+      min-height: 190px;
+      padding: 1.5rem;
       border-top: 3px solid var(--gold);
+      background: var(--paper);
     }
+
+    .priority h3 { margin-bottom: 0.65rem; color: var(--navy); }
+    .priority p { margin-bottom: 0; color: var(--muted); }
+
+    .partnership { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 2rem; margin-top: 2rem; padding: 2rem; background: var(--navy); color: var(--white); }
+    .partnership h3 { margin-bottom: 0.5rem; color: var(--white); }
+    .partnership p { max-width: 680px; margin-bottom: 0; color: #d8dfe8; }
+    .partnership .button { white-space: nowrap; }
 
     .fundraiser {
       display: grid;
@@ -438,6 +455,9 @@
       margin-top: 2rem;
     }
 
+    .involved-copy { max-width: 780px; }
+    .involved .button { margin-top: 1.5rem; }
+
     .role {
       padding-top: 1rem;
       border-top: 1px solid rgb(255 255 255 / 20%);
@@ -481,6 +501,8 @@
         gap: 1.75rem;
       }
 
+      .hero-aside { max-width: 520px; padding: 1rem 0 0; border-top: 1px solid var(--gold); border-left: 0; }
+
       h1 {
         letter-spacing: -0.03em;
       }
@@ -493,6 +515,8 @@
       .roles {
         grid-template-columns: 1fr;
       }
+
+      .partnership { grid-template-columns: 1fr; }
 
       .officers {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -566,9 +590,9 @@
       </a>
       <div class="nav-links">
         <a href="#mission">Our mission</a>
-        <a href="#support">Support</a>
+        <a href="#support">Support priorities</a>
         <a href="#governance">Leadership</a>
-        <a href="#involved">Volunteer</a>
+        <a href="#involved">Get involved</a>
       </div>
     </nav>
   </header>
@@ -579,16 +603,20 @@
         <div class="hero-copy">
           <p class="eyebrow">Faith • Opportunity • Leadership</p>
           <h1 id="hero-title">Built on the mat.<br><em>Ready for life.</em></h1>
-          <p class="intro">Families, alumni, and community supporters come together to create meaningful opportunities for wrestlers—on the mat and beyond it.</p>
+          <p class="intro">Crusader Wrestling Foundation brings families, alumni, and community partners together to help student-athletes grow in skill, character, confidence, and leadership.</p>
           <div class="actions">
-            <a class="button" href="#support">Support the Crusaders</a>
-            <a class="button button-outline" href="#involved">Be part of the team</a>
+            <a class="button" href="#support">Explore support priorities</a>
+            <a class="button button-outline" href="#involved">Get involved</a>
           </div>
         </div>
+        <aside class="hero-aside" aria-label="Our commitment">
+          <strong>Opportunity that lasts beyond the season.</strong>
+          <p>Community support helps provide practical resources and meaningful experiences for student-athletes, on and off the mat.</p>
+        </aside>
       </div>
     </section>
 
-    <div class="focus-strip" role="region" aria-label="CWF priorities and ways to support wrestlers" tabindex="0">
+    <div class="focus-strip" role="region" aria-label="Crusader Wrestling Foundation priorities and ways to support wrestlers" tabindex="0">
       <div class="focus-track">
         <ul class="focus-group">
           <li>Skills &amp; character</li>
@@ -616,16 +644,18 @@
           <h2 id="mission-title">Supporting wrestlers.<br>Building futures.</h2>
         </div>
         <div>
-          <p class="mission">Our mission is to support our wrestling program and student-athletes by helping create opportunities to develop skills, character, confidence, and leadership both on and off the mat. Preparing student-athletes for success in wrestling and, more importantly, for life beyond the sport.</p>
+          <p class="mission">Our mission is to support our wrestling program and student-athletes by helping create opportunities to develop skills, character, confidence, and leadership both on and off the mat—preparing them for success in wrestling and, more importantly, for life beyond the sport.</p>
         </div>
       </div>
     </section>
 
     <section class="support" id="support" aria-labelledby="support-title">
       <div class="wrap">
-        <p class="eyebrow">Support the Crusaders · 2026–27</p>
-        <h2 id="support-title">Your support goes with them.</h2>
-        <p class="section-lead">From training and tournament travel to team experiences, community support helps make more opportunities possible for wrestlers.</p>
+        <div class="section-head">
+          <p class="eyebrow">Community partnership · 2026–27</p>
+          <h2 id="support-title">Put your support to work.</h2>
+          <p class="section-lead">Local sponsors and supporters help meet practical needs throughout the season. Contributions support the program priorities below and help create opportunities for student-athletes to learn, compete, and grow.</p>
+        </div>
 
         <article class="fundraiser" aria-labelledby="fundraiser-title">
           <div class="fundraiser-art">
@@ -646,42 +676,50 @@
         <div class="priorities">
           <article class="priority">
             <h3>Equipment &amp; training</h3>
-            <p>Help provide the resources student-athletes need to prepare and compete.</p>
+            <p>Provide essential equipment and training opportunities that help athletes prepare, improve, and compete.</p>
           </article>
           <article class="priority">
             <h3>Travel &amp; tournament support</h3>
-            <p>Support travel, meals, and overnight stays for training and competitions.</p>
+            <p>Help make tournament participation possible by supporting transportation, meals, and overnight stays.</p>
           </article>
           <article class="priority">
             <h3>Team experiences</h3>
-            <p>Support athlete nutrition, youth wrestling activities, Senior Night, and the team banquet.</p>
+            <p>Invest in athlete nutrition, youth wrestling activities, Senior Night, and the team banquet.</p>
           </article>
         </div>
+
+        <aside class="partnership" aria-labelledby="partnership-title">
+          <div>
+            <h3 id="partnership-title">Build opportunity with us.</h3>
+            <p>We welcome local businesses, alumni, and community supporters who want to stand behind student-athletes. Sponsorship options and giving instructions will be shared here as they are finalized.</p>
+          </div>
+          <a class="button" href="#involved">See ways to participate</a>
+        </aside>
 
       </div>
     </section>
 
     <section class="governance" id="governance" aria-labelledby="governance-title">
       <div class="wrap">
-        <p class="eyebrow">Governance &amp; transparency</p>
-        <h2 id="governance-title">The people serving CWF.</h2>
-        <p class="section-lead">Crusader Wrestling Foundation is an independent Pennsylvania nonprofit corporation organized for athletic, charitable, and educational purposes. The officers below are listed in its signed IRS Form 1023-EZ application dated September 29, 2026.</p>
-        <div class="officers" aria-label="CWF officers">
+        <p class="eyebrow">Leadership &amp; accountability</p>
+        <h2 id="governance-title">Meet the foundation’s leadership.</h2>
+        <p class="section-lead governance-intro">Crusader Wrestling Foundation is an independent Pennsylvania nonprofit corporation organized for athletic, charitable, and educational purposes. Its officers provide leadership and oversight for the foundation’s work.</p>
+        <div class="officers" aria-label="Crusader Wrestling Foundation officers">
           <article class="officer"><h3>Jon Hade</h3><p>President</p></article>
           <article class="officer"><h3>Edward Carter</h3><p>Vice President</p></article>
           <article class="officer"><h3>Aimee Miller</h3><p>Treasurer</p></article>
           <article class="officer"><h3>Yvonne Aguayo</h3><p>Secretary</p></article>
         </div>
-        <p class="small status-note">CWF is seeking IRS recognition under section 501(c)(3). Its tax status and donation guidance will be updated when confirmed.</p>
+        <p class="small status-note"><strong>Tax status:</strong> The foundation has applied for recognition under section 501(c)(3), and the IRS determination is pending. Until a determination is received, the foundation cannot confirm whether contributions are tax-deductible.</p>
       </div>
     </section>
 
     <section class="involved" id="involved" aria-labelledby="involved-title">
-      <div class="wrap split">
-        <div>
-          <p class="eyebrow">There is a place for you</p>
-          <h2 id="involved-title">A strong team starts with its community.</h2>
-          <p>Parents, guardians, alumni, and friends can choose a role that fits their time and interests.</p>
+      <div class="wrap">
+        <div class="involved-copy">
+          <p class="eyebrow">A place for every supporter</p>
+          <h2 id="involved-title">Strong teams are built together.</h2>
+          <p>Parents, guardians, alumni, and community supporters can contribute time and experience in ways that make the season stronger for student-athletes.</p>
         </div>
         <div>
           <div class="roles">
@@ -710,6 +748,7 @@
   <footer>
     <div class="wrap">
       <span>Crusader Wrestling Foundation · Independent Pennsylvania nonprofit corporation</span>
+      <span>Faith · Opportunity · Leadership</span>
     </div>
   </footer>
 </body>
