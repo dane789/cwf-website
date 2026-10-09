@@ -373,36 +373,47 @@
 
     .fundraiser {
       display: grid;
-      grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr);
-      gap: 0;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
       margin-bottom: 2.5rem;
       overflow: hidden;
-      border-top: 4px solid var(--gold);
-      background: var(--navy);
-      color: var(--white);
+      border: 1px solid #ded9cd;
+      border-top: 5px solid var(--gold);
+      background: var(--white);
+      color: var(--ink);
+      box-shadow: 0 12px 32px rgb(12 35 63 / 8%);
     }
 
     .fundraiser-art {
       display: grid;
-      place-items: center;
-      padding: 1.25rem;
-      background: #f0ede5;
+      align-content: center;
+      justify-items: center;
+      padding: clamp(1rem, 3vw, 2rem);
+      background: var(--paper);
     }
 
     .fundraiser-art img {
       display: block;
-      width: min(100%, 360px);
+      width: min(100%, 430px);
       height: auto;
+      box-shadow: 0 8px 24px rgb(12 35 63 / 12%);
+    }
+
+    .fundraiser-caption {
+      margin: 0.85rem 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
     }
 
     .fundraiser-copy {
       align-self: center;
-      padding: clamp(1.5rem, 4vw, 3rem);
+      padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2.25rem) clamp(1.5rem, 3vw, 2.5rem) 0;
     }
 
     .fundraiser .eyebrow {
       margin-bottom: 0.65rem;
-      color: var(--gold);
+      color: var(--navy);
     }
 
     .fundraiser h3 {
@@ -413,7 +424,7 @@
 
     .fundraiser-lead {
       max-width: 34rem;
-      color: #d8dfe8;
+      color: var(--muted);
     }
 
     .fundraiser-prices {
@@ -425,26 +436,31 @@
 
     .fundraiser-price {
       padding: 0.9rem 1rem;
-      border: 1px solid rgb(163 146 96 / 65%);
-      background: #142e4d;
+      border: 1px solid #ded9cd;
+      border-top: 3px solid var(--gold);
+      background: var(--paper);
     }
 
     .fundraiser-price span {
       display: block;
-      color: #d8dfe8;
+      color: var(--muted);
       font-size: 0.75rem;
     }
 
     .fundraiser-price strong {
       display: block;
-      color: var(--gold);
+      color: var(--navy);
       font-size: 1.7rem;
       line-height: 1.2;
     }
 
     .fundraiser .small {
       margin-bottom: 0;
-      color: #d8dfe8;
+      padding: 0.9rem 1rem;
+      border-left: 3px solid var(--gold);
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 0.9rem;
     }
 
     .roles {
@@ -524,10 +540,15 @@
 
       .fundraiser {
         grid-template-columns: 1fr;
+        gap: 0;
       }
 
       .fundraiser-art img {
-        width: min(100%, 320px);
+        width: min(100%, 400px);
+      }
+
+      .fundraiser-copy {
+        padding: 1.5rem;
       }
 
       .mission {
@@ -660,16 +681,17 @@
         <article class="fundraiser" aria-labelledby="fundraiser-title">
           <div class="fundraiser-art">
             <img src="cwf_gold_out_shirt.jpg" alt="Gold Out fundraiser T-shirt preview in Vegas gold with navy Crusaders wrestling graphics, shown front and back">
+            <p class="fundraiser-caption">Vegas gold performance tee with navy graphics, shown front and back</p>
           </div>
           <div class="fundraiser-copy">
-            <p class="eyebrow">Upcoming fundraiser</p>
-            <h3 id="fundraiser-title">Gold Out T-shirt pre-orders</h3>
-            <p class="fundraiser-lead">Show your support in gold with a lightweight performance shirt made for the season and beyond.</p>
+            <p class="eyebrow">Gold Out fundraiser</p>
+            <h3 id="fundraiser-title">Performance T-shirt</h3>
+            <p class="fundraiser-lead">Show your support in a lightweight performance shirt made for the season, travel, and everyday wear.</p>
             <div class="fundraiser-prices" aria-label="Shirt pricing">
-              <div class="fundraiser-price"><span>Pre-order through Nov. 30</span><strong>$20</strong></div>
+              <div class="fundraiser-price"><span>Pre-order price · through Nov. 30</span><strong>$20</strong></div>
               <div class="fundraiser-price"><span>Event-day price</span><strong>$25</strong></div>
             </div>
-            <p class="small">The event date and pickup details are still being finalized. Cash and Venmo will be accepted; payment instructions and the order form will be shared when orders open.</p>
+            <p class="small">Cash and Venmo will be accepted. The event date, pickup details, and order form will be posted here when available.</p>
           </div>
         </article>
 
