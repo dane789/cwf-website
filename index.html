@@ -392,6 +392,113 @@
       background: var(--paper);
     }
 
+    .raffle-art {
+      position: relative;
+      min-height: 100%;
+      overflow: hidden;
+      align-content: center;
+      justify-items: center;
+      background: radial-gradient(circle at 50% 34%, #18395c 0, var(--navy) 67%);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .raffle-art::before,
+    .raffle-art::after {
+      position: absolute;
+      width: 19rem;
+      height: 19rem;
+      border: 1px solid rgb(163 146 96 / 34%);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .raffle-art::before { transform: scale(1.22); }
+    .raffle-art::after { transform: scale(1.48); }
+
+    .raffle-art-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      justify-items: center;
+      padding: 1.5rem;
+    }
+
+    .raffle-art .raffle-kicker {
+      margin: 0 0 0.75rem;
+      color: #e2d8bb;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .raffle-art strong {
+      display: block;
+      color: var(--gold);
+      font-size: clamp(4rem, 7vw, 5.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    .raffle-art span {
+      display: block;
+      margin-top: 0.8rem;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .raffle-art .fundraiser-caption {
+      max-width: 15rem;
+      margin-top: 1.4rem;
+      color: #d8dfe8;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .raffle-art .fundraiser-caption strong {
+      display: inline;
+      color: var(--white);
+      font-size: inherit;
+      letter-spacing: normal;
+    }
+
+    .raffle-date strong {
+      font-size: 1.25rem;
+      letter-spacing: normal;
+    }
+
+    .prize-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem 1rem;
+      margin: 1.2rem 0 1.4rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .prize-highlights li {
+      position: relative;
+      padding-left: 1rem;
+      color: var(--ink);
+      font-size: 0.9rem;
+    }
+
+    .prize-highlights li::before {
+      position: absolute;
+      top: 0.62em;
+      left: 0;
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 50%;
+      background: var(--gold);
+      content: "";
+    }
+
     .fundraiser-art img {
       display: block;
       width: min(100%, 430px);
@@ -723,6 +830,33 @@
               <div class="fundraiser-price"><span>Event-day price</span><strong>$25</strong></div>
             </div>
             <p class="small">Cash and Venmo will be accepted. The event date, pickup details, and order form will be posted here when available.</p>
+          </div>
+        </article>
+
+        <article class="fundraiser" aria-labelledby="meat-raffle-title">
+          <div class="fundraiser-art raffle-art" aria-hidden="true">
+            <div class="raffle-art-inner">
+              <p class="raffle-kicker">Crusader Wrestling Foundation</p>
+              <strong>10</strong>
+              <span>Prize packages</span>
+              <p class="fundraiser-caption">A chance to win a spread of <strong>steaks, seafood, and family favorites.</strong></p>
+            </div>
+          </div>
+          <div class="fundraiser-copy">
+            <p class="eyebrow">Upcoming CWF fundraiser</p>
+            <h3 id="meat-raffle-title">Meat Raffle</h3>
+            <p class="fundraiser-lead">Ten prize packages bring together premium cuts and crowd favorites, from steak and seafood to ribs, poultry, and more.</p>
+            <div class="fundraiser-prices" aria-label="Meat raffle details">
+              <div class="fundraiser-price"><span>Ticket</span><strong>$10</strong></div>
+              <div class="fundraiser-price raffle-date"><span>Live drawing</span><strong><time datetime="2026-12-16T17:00:00-05:00">Dec. 16, 2026</time><br>5 p.m.</strong></div>
+            </div>
+            <ul class="prize-highlights" aria-label="Prize highlights">
+              <li>Steaks and seafood</li>
+              <li>Ribs and pork</li>
+              <li>Poultry and ground beef</li>
+              <li>Ten winners</li>
+            </ul>
+            <p class="small">The drawing will be held on Facebook Live. Winners do not need to be present. Prizes are picked up at a local Karns Food Store. Ask a CWF organizer about ticket availability and current details. Winners are responsible for applicable taxes.</p>
           </div>
         </article>
 
