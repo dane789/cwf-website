@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <clipPath id="crest-circle">
-      <circle cx="32" cy="32" r="32" />
-    </clipPath>
-  </defs>
-  <image href="cwf_logo.jpg" x="-24.9" y="0" width="113.8" height="64" preserveAspectRatio="none" clip-path="url(#crest-circle)" />
-</svg>
