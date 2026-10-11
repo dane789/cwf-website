@@ -451,6 +451,25 @@
       box-shadow: 0 8px 24px rgb(12 35 63 / 12%);
     }
 
+    .shirt-image-frame {
+      position: relative;
+      width: min(100%, 430px);
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #f7f4ec;
+      box-shadow: 0 8px 24px rgb(12 35 63 / 12%);
+    }
+
+    .fundraiser-art .shirt-image-frame img {
+      position: absolute;
+      top: -14%;
+      left: 0;
+      width: 150%;
+      max-width: none;
+      height: auto;
+      box-shadow: none;
+    }
+
     .fundraiser-caption {
       margin: 0.85rem 0 0;
       color: var(--muted);
@@ -771,9 +790,11 @@
         </div>
 
         <article class="fundraiser" aria-labelledby="fundraiser-title">
-          <div class="fundraiser-art">
-            <img src="cwf_gold_out_shirt.jpg" alt="Gold Out fundraiser T-shirt preview in Vegas gold with navy Crusaders wrestling graphics, shown front and back">
-            <p class="fundraiser-caption">Vegas gold performance tee with navy graphics, shown front and back</p>
+          <div class="fundraiser-art shirt-art">
+            <div class="shirt-image-frame">
+              <img src="cwf_gold_out_shirt.jpg" alt="Front of the Vegas gold performance shirt with navy Crusaders wrestling graphics">
+            </div>
+            <p class="fundraiser-caption">Front view in Vegas gold with navy graphics</p>
           </div>
           <div class="fundraiser-copy">
             <p class="eyebrow">Gold Out fundraiser</p>
