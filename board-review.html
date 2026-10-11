@@ -4,75 +4,67 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Unlisted website review and action list for Crusader Wrestling Foundation board discussion.">
+  <meta name="description" content="Unlisted board status and action tracker for Crusader Wrestling Foundation.">
   <link rel="icon" type="image/png" href="favicon.png?v=3">
-  <title>Board Website Review | Crusader Wrestling Foundation</title>
+  <title>Board Review | Crusader Wrestling Foundation</title>
   <style>
-    :root { color-scheme: light; --navy: #0C233F; --gold: #A39260; --paper: #f6f4ed; --ink: #172839; --muted: #536170; --white: #fff; }
+    :root { color-scheme: light; --navy: #0C233F; --gold: #A39260; --paper: #f6f4ed; --ink: #172839; --muted: #536170; --white: #fff; --line: #ded9cd; }
     *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 Arial, Helvetica, sans-serif; }
-    a { color: inherit; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 Arial, Helvetica, sans-serif; }
+    a { color: var(--navy); }
     a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
     .skip { position: absolute; left: 1rem; top: -5rem; z-index: 1; padding: .75rem 1rem; background: var(--white); color: var(--navy); }
     .skip:focus { top: 1rem; }
+    .wrap { width: min(980px, 92%); margin-inline: auto; }
     .top { background: var(--navy); color: var(--white); border-bottom: 3px solid var(--gold); }
-    .wrap { width: min(1000px, 90%); margin-inline: auto; }
-    .bar { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1rem; }
-    .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; }
-    .brand img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; }
-    .brand span { font-size: .75rem; font-weight: 700; letter-spacing: .06em; line-height: 1.4; text-transform: uppercase; }
-    .label { color: var(--gold); font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-    main { padding-block: clamp(2rem, 6vw, 4rem); }
+    .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .85rem; }
+    .brand { display: flex; align-items: center; gap: .7rem; color: var(--white); text-decoration: none; }
+    .brand img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+    .brand span, .eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .12em; line-height: 1.35; text-transform: uppercase; }
+    .eyebrow { margin-bottom: .5rem; color: var(--gold); }
+    main { padding-block: clamp(2rem, 5vw, 3.5rem); }
     h1, h2, h3, p { margin-top: 0; }
-    h1 { max-width: 760px; margin-bottom: .75rem; color: var(--navy); font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.08; letter-spacing: -.03em; }
-    .intro { max-width: 740px; margin-bottom: 2rem; color: var(--muted); font-size: 1.1rem; }
-    .notice { margin-bottom: 2.5rem; padding: 1rem 1.25rem; border-left: 4px solid var(--gold); background: var(--white); }
+    h1 { margin-bottom: .55rem; color: var(--navy); font-size: clamp(2rem, 5vw, 3rem); line-height: 1.08; letter-spacing: -.025em; }
+    h2 { margin-bottom: .75rem; color: var(--navy); font-size: clamp(1.25rem, 3vw, 1.65rem); line-height: 1.2; }
+    h3 { margin-bottom: .35rem; color: var(--navy); font-size: 1rem; }
+    .intro { max-width: 720px; margin-bottom: 1.25rem; color: var(--muted); font-size: 1.05rem; }
+    .notice { margin-block: 1.25rem 2rem; padding: .9rem 1rem; border-left: 4px solid var(--gold); background: var(--white); }
     .notice strong { color: var(--navy); }
-    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: 1.5rem 0 2rem; }
-    .button { display: inline-block; padding: .7rem 1rem; border: 1px solid var(--navy); background: var(--navy); color: var(--white); font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .section { margin-top: 2.5rem; }
+    .section > p { max-width: 800px; color: var(--muted); }
+    .cards { display: grid; gap: .85rem; }
+    .card { padding: 1.15rem 1.25rem; border-top: 3px solid var(--gold); background: var(--white); }
+    .card p { margin-bottom: .45rem; }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+    .status { display: inline-block; margin-top: .25rem; padding: .15rem .5rem; border: 1px solid #d6d0c1; color: #34475a; font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+    .status.needs { border-color: #b7a878; background: #f5f0e1; }
+    .card ul { margin: .35rem 0 .6rem; padding-left: 1.2rem; }
+    .card li + li { margin-top: .25rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+    .button { display: inline-block; padding: .65rem .9rem; border: 1px solid var(--navy); background: var(--navy); color: var(--white); font: inherit; font-weight: 700; text-decoration: none; }
     .button.secondary { background: transparent; color: var(--navy); }
-    .list { display: grid; gap: 1rem; }
-    .item { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; padding: 1.5rem; border-top: 3px solid var(--gold); background: var(--white); }
-    .number { color: var(--gold); font-size: 1.5rem; font-weight: 700; }
-    .item h2 { margin-bottom: .5rem; color: var(--navy); font-size: 1.3rem; line-height: 1.25; }
-    .item p { margin-bottom: .75rem; }
-    .item ul { margin: 0; padding-left: 1.25rem; }
-    .item li + li { margin-top: .35rem; }
-    .status { display: inline-block; margin-top: .25rem; padding: .2rem .55rem; border: 1px solid #d8d3c4; color: #34475a; font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
-    .closing { margin-top: 2rem; padding: 1.5rem; background: var(--navy); color: var(--white); }
-    .closing h2 { margin-bottom: .5rem; color: var(--white); font-size: 1.25rem; }
-    .closing p { margin-bottom: 0; color: #d8dfe8; }
-    .review-section { margin-top: 3rem; }
-    .review-section > h2 { color: var(--navy); font-size: 1.8rem; }
-    .review-section > p { max-width: 780px; color: var(--muted); }
-    .review-card { margin-top: 1rem; padding: 1.4rem; border-top: 3px solid var(--gold); background: var(--white); }
-    .review-card h3 { margin-bottom: .5rem; color: var(--navy); font-size: 1.15rem; }
-    .review-card p:last-child, .review-card ul:last-child { margin-bottom: 0; }
-    .compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-    .compare-grid .review-card { margin-top: 0; }
-    .draft-copy { padding: 1rem 1.2rem; border-left: 3px solid var(--gold); background: #eeece4; }
-    .table-wrap { overflow-x: auto; margin-top: 1rem; background: var(--white); }
+    .table-wrap { overflow-x: auto; background: var(--white); }
     table { width: 100%; border-collapse: collapse; text-align: left; }
-    th, td { padding: .85rem 1rem; border-bottom: 1px solid #ded9cd; vertical-align: top; }
-    th { background: var(--navy); color: var(--white); font-size: .8rem; letter-spacing: .04em; }
-    td:last-child { min-width: 9rem; color: var(--muted); font-size: .875rem; }
-    .source-list { display: grid; gap: .65rem; padding-left: 1.25rem; }
-    .source-list a { color: var(--navy); font-weight: 700; }
-    .source-note { padding: 1rem 1.2rem; border-left: 3px solid var(--gold); background: #eeece4; }
-    footer { padding-block: 1.25rem; background: var(--navy); color: #ced6df; font-size: .8rem; }
-    @media (max-width: 600px) {
-      .bar { align-items: flex-start; flex-direction: column; gap: .5rem; }
-      .item { grid-template-columns: 2rem minmax(0, 1fr); gap: .75rem; padding: 1.1rem; }
-      .number { font-size: 1.2rem; }
-      .compare-grid { grid-template-columns: 1fr; }
-      th, td { padding: .7rem; }
+    th, td { padding: .75rem .85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { background: var(--navy); color: var(--white); font-size: .8rem; }
+    td:last-child { min-width: 10rem; color: var(--muted); font-size: .88rem; }
+    .callout { margin-top: 1rem; padding: 1rem; background: #eeece4; }
+    .section-note { margin-top: .85rem; color: var(--muted); font-size: .9rem; }
+    footer { padding-block: 1rem; background: var(--navy); color: #ced6df; font-size: .8rem; }
+    @media (max-width: 620px) {
+      .bar { align-items: flex-start; }
+      .bar > .eyebrow { text-align: right; }
+      .card { padding: 1rem; }
+      th, td { padding: .65rem; }
     }
     @media print {
       body { background: var(--white); }
       .top, footer { print-color-adjust: exact; }
       .actions { display: none; }
-      .item, .notice, .closing { break-inside: avoid; }
+      .card, .notice { break-inside: avoid; }
     }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
@@ -80,271 +72,119 @@
   <header class="top">
     <div class="wrap bar">
       <a class="brand" href="index.html" aria-label="Crusader Wrestling Foundation public website">
-        <img src="cwf_logo.png" alt="" width="54" height="54">
+        <img src="cwf_logo.png" alt="" width="48" height="48">
         <span>Crusader<br>Wrestling Foundation</span>
       </a>
-      <span class="label">Board review page</span>
+      <span class="eyebrow">Board review</span>
     </div>
   </header>
   <main class="wrap" id="main">
-    <p class="label">Website review and next steps</p>
-    <h1>Board review checklist</h1>
-    <p class="intro">Use this page to confirm the public information, identify what is still needed, and agree on the next updates to the Crusader Wrestling Foundation website.</p>
-
-    <aside class="notice" aria-label="Completed website update">
-      <strong>Completed Oct. 8, 2026:</strong> The homepage wording now describes CWF as supporting student-athletes and wrestling programs. The phrase “our wrestling program” has been removed to keep CWF’s independent role clear. The board can still confirm in its minutes that the public summary reflects the approved purpose.
-    </aside>
-
-    <aside class="notice" aria-label="Page visibility notice">
-      <strong>Visibility:</strong> This page is not linked from the public website and search engines are asked not to index it. It is not password-protected. Anyone with the URL can view or share it, so do not add EINs, private contact information, or confidential board material.
-    </aside>
-
+    <p class="eyebrow">Status reviewed October 11, 2026</p>
+    <h1>Board action tracker</h1>
+    <p class="intro">A concise working list of what is current, what needs a board decision, and what is waiting on details.</p>
+    <aside class="notice"><strong>Visibility:</strong> This page is unlisted and asks search engines not to index it, but it is not password-protected. Anyone with the link can view or share it. Keep confidential records and personal contact information off this page.</aside>
     <div class="actions">
-      <a class="button" href="index.html">Open the public website</a>
-      <button class="button secondary" type="button" onclick="window.print()">Print this checklist</button>
+      <a class="button" href="index.html">Public website</a>
+      <button class="button secondary" type="button" onclick="window.print()">Print</button>
     </div>
 
-    <div class="list">
-      <article class="item">
-        <div class="number" aria-hidden="true">01</div>
-        <div>
-          <h2>Verify public identity and mission wording</h2>
-          <p>The public site uses the name Crusader Wrestling Foundation, describes it as an independent Pennsylvania nonprofit corporation, and says it supports student-athletes and wrestling programs.</p>
-          <ul>
-            <li>The wording update is complete. Confirm that the public mission summary reflects the approved purpose.</li>
-            <li>Record any board confirmation or clarification in the board minutes.</li>
-          </ul>
-          <span class="status">Wording updated; minutes follow-up</span>
-        </div>
-      </article>
-
-      <article class="item">
-        <div class="number" aria-hidden="true">02</div>
-        <div>
-          <h2>Complete the Gold Out fundraiser information</h2>
-          <p>The site currently lists pre-orders through November 30 at $20 and an event-day price of $25.</p>
-          <ul>
-            <li>Confirm the prices, order deadline, available sizes, and event date.</li>
-            <li>Provide the approved order form URL and payment instructions.</li>
-            <li>Confirm pickup time and location, then update the page when details are final.</li>
-            <li>Decide when the fundraiser notice should be removed after the order period.</li>
-          </ul>
-          <span class="status">Details needed</span>
-        </div>
-      </article>
-
-      <article class="item">
-        <div class="number" aria-hidden="true">03</div>
-        <div>
-          <h2>Approve sponsor and donation instructions</h2>
-          <ul>
-            <li>Choose a public contact email or other contact method for sponsors and families.</li>
-            <li>Approve donation instructions or the fundraising platform the foundation will use.</li>
-            <li>Decide whether the foundation will publish sponsorship levels or recognition benefits.</li>
-            <li>Keep tax-deductibility statements accurate. The website currently says the IRS determination is pending.</li>
-          </ul>
-          <span class="status">Board decision needed</span>
-        </div>
-      </article>
-
-      <article class="item">
-        <div class="number" aria-hidden="true">04</div>
-        <div>
-          <h2>Verify leadership and public documents</h2>
-          <ul>
-            <li>Confirm the officer names and titles shown on the public website.</li>
-            <li>Decide whether to publish approved governing documents or an annual summary.</li>
-            <li>Review any document for personal addresses, signatures, financial account details, or other private information before sharing.</li>
-          </ul>
-          <span class="status">Board review needed</span>
-        </div>
-      </article>
-
-      <article class="item">
-        <div class="number" aria-hidden="true">05</div>
-        <div>
-          <h2>Choose the next public updates</h2>
-          <ul>
-            <li>Confirm the service area and public mailing address, if either should appear on the site.</li>
-            <li>Choose a domain when the foundation is ready to move beyond temporary GitHub Pages hosting.</li>
-            <li>Share approved photos and short program updates as activities happen. Obtain permission before publishing identifiable student photos.</li>
-          </ul>
-          <span class="status">Plan when ready</span>
-        </div>
-      </article>
-    </div>
-
-    <section class="review-section" aria-labelledby="direction-title">
-      <p class="label">Mission and services</p>
-      <h2 id="direction-title">A clear direction for CWF</h2>
-      <p>The approved governance packet describes CWF as an independent charitable organization that can support wrestling programs and student-athletes through equipment, training, competition expenses, nutrition, educational opportunities, and youth wrestling activities. It also emphasizes sportsmanship, discipline, leadership, character, academic achievement, and amateur athletics.</p>
-
-      <article class="review-card">
-        <h3>What the current website communicates</h3>
-        <p>The site describes support for student-athletes and wrestling programs, including equipment, training, travel, meals, lodging, team activities, and volunteers. This wording presents CWF as a supporter and avoids suggesting that it operates or belongs to one team.</p>
-      </article>
-
-      <article class="review-card">
-        <h3>Public mission wording now in use</h3>
-        <p class="small">This is a plain-language website summary. It does not amend the bylaws or other governing records.</p>
-        <p class="draft-copy">Crusader Wrestling Foundation supports student-athletes and wrestling programs by helping provide equipment, training, competition opportunities, nutrition, and educational resources. We seek to help athletes build sportsmanship, discipline, character, confidence, and leadership for success on the mat and in life.</p>
-        <p>The homepage now uses a shorter version of this wording. Board members can confirm that the summary reflects the foundation’s approved purpose and whether to retain “Faith · Opportunity · Leadership” as the public tagline.</p>
-      </article>
-
-      <div class="compare-grid" aria-label="Lessons from comparable organizations">
-        <article class="review-card">
-          <h3>What similar organizations make clear</h3>
-          <p>Beat the Streets Philadelphia and New York describe who their programs serve, what participants receive, and how wrestling connects to personal development. Wrestle Like A Girl names its audience and leadership outcomes. Pennsylvania Junior Wrestling emphasizes a safe learning environment, wrestling skills, respect, and sportsmanship.</p>
+    <section class="section" aria-labelledby="current-title">
+      <p class="eyebrow">Current website</p>
+      <h2 id="current-title">Accuracy and open details</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Organization and mission</h3>
+          <p>The legal name in the bylaws is <strong>Crusader Wrestling Foundation</strong>. CWF is an independent Pennsylvania nonprofit corporation. The public site describes support for student-athletes and wrestling programs without claiming school ownership or affiliation.</p>
+          <span class="status">Consistent with bylaws</span>
         </article>
-        <article class="review-card">
-          <h3>What CWF can take from that</h3>
-          <p>Use a simple service promise and report results when they can be measured. CWF does not need to claim it runs mentoring, academic, or year-round club programs unless the board approves a plan, budget, delivery partner, eligibility rules, and safeguards for those services.</p>
+        <article class="card">
+          <h3>Officer name needs confirmation</h3>
+          <p>The homepage lists Vice President <strong>Edward Carter</strong>; the October 8 adoption resolution says <strong>Eddie Carter</strong>. Confirm the public name against the official roster, then align the site and records.</p>
+          <span class="status needs">Secretary follow-up</span>
+        </article>
+        <article class="card">
+          <h3>Gold Out shirt fundraiser</h3>
+          <p>The published form now lists $20 per shirt through November 30, 2026, and $25 outside the pre-order period. It offers cash, Venmo, and check. Checks are payable to Crusader Wrestling Foundation; Venmo notes should include “Gold Shirt” and the customer name.</p>
+          <ul>
+            <li>Event date and shirt pickup details are still TBD.</li>
+            <li>The homepage payment note still says cash and Venmo only. Update it to include check or use general wording.</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeP2piC3H9QqqF4O9gF2lgrNzeFVXiDX-lhGqTuyNTYGZL07Q/viewform">Open the order form</a><br>
+          <span class="status needs">Update homepage; details pending</span>
+        </article>
+        <article class="card">
+          <h3>Meat raffle</h3>
+          <p>Current public details: $10 tickets, 10 winners, drawing December 16, 2026 at 5 p.m. Wrestlers sell tickets directly; the online form is a secondary ticket request path.</p>
+          <p>Before relying on the public wording, confirm raffle rules, eligible/licensed organizer, ticket language, sales process, and pickup details.</p>
+          <span class="status needs">Board follow-up</span>
+        </article>
+        <article class="card">
+          <h3>Public contact and giving</h3>
+          <p>A public email, donation process, sponsorship details, and public mailing or service-area information have not been finalized. Do not add tax-deductibility claims while the IRS determination is pending.</p>
+          <span class="status needs">Information and decisions needed</span>
         </article>
       </div>
+    </section>
 
-      <article class="review-card">
-        <h3>Suggested service scope</h3>
+    <section class="section" aria-labelledby="governance-title">
+      <p class="eyebrow">Approved governance</p>
+      <h2 id="governance-title">October 8 board actions</h2>
+      <p>The current official packet records approval of the bylaws, Board Roles &amp; Responsibilities, Financial Policy, and Conflict of Interest Policy. The October 1 review packet is historical and should not be treated as current policy.</p>
+      <div class="card">
+        <h3>Confirm completion in the official records</h3>
         <ul>
-          <li><strong>Current support areas:</strong> equipment and training, competition and travel, meals and lodging, youth wrestling activities, and athlete development opportunities approved by the board.</li>
-          <li><strong>Potential future programs:</strong> mentoring, academic help, leadership workshops, or broader youth programming only after the board defines who is served, who delivers the service, the budget, safety practices, and how results will be reviewed.</li>
-          <li><strong>Events:</strong> Senior Night and a banquet can support athlete recognition and community, subject to an approved charitable purpose and budget.</li>
+          <li>Enter the meeting date, quorum, motions, votes, thresholds, and amendments in the minutes; add the minutes reference to the adoption record.</li>
+          <li>Complete required signatures and annual conflict disclosures.</li>
+          <li>Designate bank users and signers, implement two-person review, and put the approved spending limits into practice.</li>
         </ul>
-      </article>
-
-      <div class="review-card">
-        <h3>Reference organizations</h3>
-        <ul class="source-list">
-          <li><a href="https://btsphilly.org/wrestling/">Beat the Streets Philadelphia</a>, youth wrestling programs and development.</li>
-          <li><a href="https://www.btsny.org/junior-league">Beat the Streets New York Junior League</a>, structured wrestling and life learning.</li>
-          <li><a href="https://wrestlelikeagirl.org/about-us">Wrestle Like A Girl</a>, leadership and wrestling programs for girls and women.</li>
-          <li><a href="https://www.pajw.org/about-pjw/">Pennsylvania Junior Wrestling</a>, youth wrestling mission and values.</li>
-        </ul>
+        <p><strong>Approved spending thresholds:</strong> routine expenses up to $250; major expenses from $250.01 to $1,000; significant expenses over $1,000.</p>
+        <span class="status needs">Records checklist; confirm latest status</span>
       </div>
+      <div class="callout"><strong>Mission fit:</strong> The bylaws support equipment, training, competition expenses, nutrition, educational opportunities, programs, resources, and youth wrestling activities. Keep public claims within approved activities and CWF’s independent role.</div>
+      <div class="callout"><strong>Peer-site takeaway:</strong> Explain who CWF serves, what it supports, and report verified results. Keep CWF’s scope local and within approved plans.</div>
+      <p class="section-note">Record board votes and approvals in the official minutes. This page is a working summary and does not save responses.</p>
     </section>
 
-    <section class="review-section" aria-labelledby="uswf-title">
-      <p class="label">Website review</p>
-      <h2 id="uswf-title">Ideas from the U.S. Wrestling Foundation</h2>
-      <p>The U.S. Wrestling Foundation operates at a national scale, supports national and college wrestling efforts, and has a broad board and giving program. CWF can borrow the clarity of its website structure while keeping its own local scope, approved mission, and independent identity.</p>
+    <section class="section" aria-labelledby="workspace-title">
+      <p class="eyebrow">Operations planning</p>
+      <h2 id="workspace-title">Google Workspace rollout</h2>
+      <p>The IRS determination is still pending and a domain has not been selected. Google for Nonprofits approval and an active Workspace account are not confirmed. This is a plan for after those prerequisites.</p>
       <div class="table-wrap">
         <table>
-          <thead><tr><th scope="col">What their site makes clear</th><th scope="col">A right-sized CWF version to consider</th><th scope="col">Board note</th></tr></thead>
+          <thead><tr><th scope="col">Step</th><th scope="col">Use</th><th scope="col">Status</th></tr></thead>
           <tbody>
-            <tr><td>Why wrestling matters</td><td>Add a short values statement linking wrestling to character, perseverance, discipline, confidence, and leadership. Keep the approved CWF mission as the source of truth.</td><td>Agree on language first</td></tr>
-            <tr><td>What the foundation does</td><td>Make current support areas easy to scan, then distinguish them from future programs that are only ideas.</td><td>Keep claims within capacity</td></tr>
-            <tr><td>Accomplishments and impact</td><td>After the first season, post a brief update with verified totals: contributions received, broad uses, equipment or training supported, and opportunities made possible.</td><td>Use board-reviewed records</td></tr>
-            <tr><td>Ways to give</td><td>When ready, provide one clear contribution path and a separate sponsor contact. Add other giving methods only when CWF can accept and administer them.</td><td>Confirm process and tax wording</td></tr>
-            <tr><td>Leadership and contact</td><td>Publish approved officer names and a public email or contact form when one is established. Keep private addresses and personal numbers off the site.</td><td>Information needed</td></tr>
-            <tr><td>Campaigns and events</td><td>For each approved fundraiser, state its purpose, dates, participation details, and final result. Remove expired notices so the page stays current.</td><td>Update after each campaign</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="source-note"><strong>Do not copy:</strong> U.S. Wrestling Foundation’s national programs, board size, donor benefits, tax-exempt status, tax ID, or gift options. CWF should publish only its own approved information. Until the IRS determination is received, keep CWF’s current tax-status statement and do not promise that contributions are tax-deductible.</p>
-      <div class="review-card">
-        <h3>Pages reviewed</h3>
-        <ul class="source-list">
-          <li><a href="https://uswrestlingfoundation.org/who-we-are/vision-mission/">Vision and mission</a></li>
-          <li><a href="https://uswrestlingfoundation.org/what-we-do/">What they do</a></li>
-          <li><a href="https://uswrestlingfoundation.org/what-we-do/accomplishments/">Accomplishments</a></li>
-          <li><a href="https://uswrestlingfoundation.org/ways-to-give/">Ways to give</a></li>
-          <li><a href="https://uswrestlingfoundation.org/who-we-are/leadership/">Leadership</a></li>
-          <li><a href="https://uswrestlingfoundation.org/who-we-are/board-membership/">Board membership</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="review-section" aria-labelledby="decisions-title">
-      <p class="label">Board decisions</p>
-      <h2 id="decisions-title">Decisions to record</h2>
-      <p>Use the board’s regular minutes or resolutions to record decisions. This page is a working checklist and does not store votes.</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th scope="col">Decision</th><th scope="col">Question for the board</th><th scope="col">Status</th></tr></thead>
-          <tbody>
-            <tr><td>Confirm public mission summary</td><td>Does the revised wording accurately summarize CWF’s approved purpose and make its independent support role clear?</td><td>Minutes follow-up</td></tr>
-            <tr><td>Service priorities</td><td>Which support areas are active this season, and what eligibility or approval rules apply to assistance?</td><td>Define and record</td></tr>
-            <tr><td>Fundraising and sponsorship</td><td>Which payment methods, sponsor recognition, and benefits are approved and deliverable?</td><td>Details needed</td></tr>
-            <tr><td>Public contact and reporting</td><td>What email or mailing/service-area information may be public, and what outcomes will be reported each year?</td><td>Details needed</td></tr>
+            <tr><td>Eligibility and domain</td><td>After the IRS determination, confirm approved public contact details, choose a domain, and complete eligibility and domain verification.</td><td>Waiting on IRS status and domain</td></tr>
+            <tr><td>Governance and records</td><td>Shared Drive for minutes, policies, resolutions, approvals, and annual disclosures, with access limited by role.</td><td>Plan after setup</td></tr>
+            <tr><td>Finance and fundraising</td><td>Role-based email, budget and fundraiser records, receipt storage, and board reporting with appropriate access controls.</td><td>Plan after setup</td></tr>
+            <tr><td>Calendar and coordination</td><td>Board calendar, meeting documents, volunteer coordination, and approved public forms.</td><td>Plan after setup</td></tr>
+            <tr><td>Test and maintain</td><td>Pilot with a small group, assign account owners, document access, and review permissions regularly.</td><td>Plan after setup</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section class="review-section" aria-labelledby="workspace-title">
-      <p class="label">Operations planning</p>
-      <h2 id="workspace-title">Google Workspace plan</h2>
-      <p>Use Workspace to organize CWF’s communication, governance records, finances, fundraising, and volunteer coordination. This is a planning tracker; it does not mean CWF has been approved for Google for Nonprofits or that an account has been created.</p>
-
-      <aside class="notice" aria-label="Google for Nonprofits eligibility status">
-        <strong>Eligibility gate:</strong> Google’s current U.S. guidance says organizations need IRS recognition of 501(c)(3) tax-exempt status and verification by its nonprofit validation partner. CWF’s public site says the IRS determination is pending, so mark the application as blocked until the status changes and eligibility is confirmed. <a href="https://support.google.com/nonprofits/answer/2659443?hl=en">Google’s U.S. eligibility guidance</a>
-      </aside>
-
-      <article class="review-card">
-        <h3>Planned uses for CWF</h3>
-        <ul>
-          <li><strong>Gmail:</strong> Set up a public contact address for families and supporters, plus role addresses such as info@ or treasurer@ if useful. Assign each address an owner and backup. Do not share one person’s password.</li>
-          <li><strong>Shared Drive:</strong> Keep board and operating records in shared folders for governance, fundraising, website and communications, and programs. Restrict financial records to authorized officers.</li>
-          <li><strong>Docs and Sheets:</strong> Use Docs for agendas, minutes, policies, sponsor materials, and website copy. Use Sheets for the board-approved budget, fundraising records, impact summary, and work backlog.</li>
-          <li><strong>Calendar and Meet:</strong> Coordinate board meetings, season events, volunteer schedules, and remote meetings.</li>
-          <li><strong>Forms:</strong> Consider volunteer interest and event signups. Collect only information needed to run each activity, and avoid sensitive student records in general-purpose forms or shared files.</li>
-        </ul>
-      </article>
-
+    <section class="section" aria-labelledby="next-title">
+      <p class="eyebrow">Next decisions</p>
+      <h2 id="next-title">Priority list</h2>
       <div class="table-wrap">
         <table>
-          <thead><tr><th scope="col">Step</th><th scope="col">Completion item</th><th scope="col">Status</th></tr></thead>
+          <thead><tr><th scope="col">Priority</th><th scope="col">Action</th><th scope="col">Owner/status</th></tr></thead>
           <tbody>
-            <tr><td>1. Confirm eligibility</td><td>Wait for the IRS determination letter. Verify CWF’s registered legal name and tax information privately against official records. Do not place the EIN on this public-by-URL board page.</td><td>Blocked: IRS determination pending</td></tr>
-            <tr><td>2. Prepare organization details</td><td>Confirm the approved public contact email, service area or mailing details, and the documents Google or its verification partner requests.</td><td>Information needed</td></tr>
-            <tr><td>3. Choose and verify a domain</td><td>Select a permanent domain, confirm the organization controls it, and verify it through the domain registrar when setting up Workspace. Google requires a verified primary domain for Workspace activation.</td><td>Board decision; not selected</td></tr>
-            <tr><td>4. Assign account responsibility</td><td>Name a primary Workspace administrator and a backup. Agree on account recovery, two-step verification, who gets accounts, and how access will be removed when roles change.</td><td>Board decision</td></tr>
-            <tr><td>5. Apply and activate</td><td>After eligibility is confirmed, complete Google for Nonprofits verification and separately activate Workspace for the chosen domain.</td><td>Waiting on steps 1 and 3</td></tr>
-            <tr><td>6. Set up and pilot services</td><td>Create the shared Drive structure, public and role email addresses, board calendar, meeting documents, and approved forms. Test with a small group before inviting all users.</td><td>After approval</td></tr>
-            <tr><td>7. Maintain access and records</td><td>Review users and sharing permissions at least annually and when officers change. Keep board minutes and financial records in CWF-controlled locations.</td><td>Ongoing after setup</td></tr>
+            <tr><td>1</td><td>Resolve the public Vice President name and update the homepage payment note.</td><td>Secretary / website</td></tr>
+            <tr><td>2</td><td>Confirm Gold Out event and pickup details; update the form and website when final.</td><td>Fundraiser lead</td></tr>
+            <tr><td>3</td><td>Confirm raffle compliance, ticket wording, seller process, and pickup details.</td><td>Board / fundraiser lead</td></tr>
+            <tr><td>4</td><td>Approve public contact, giving, and sponsorship information; choose what should be published.</td><td>Board decision</td></tr>
+            <tr><td>5</td><td>Review 4aGoodCause for eligibility, pricing, fees, payout timing, receipts, and data handling before choosing a platform.</td><td>Research only</td></tr>
+            <tr><td>6</td><td>Complete Workspace prerequisites, select a domain, assign administrators, and pilot the planned services.</td><td>After prerequisites</td></tr>
+            <tr><td>7</td><td>After activities, publish verified fundraising and program results with appropriate photo permissions.</td><td>After first reporting period</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="source-note"><strong>Tracking note:</strong> Update the status cells on this page as each step is completed. This static page does not save checkboxes or board responses. Google for Nonprofits and Google Workspace use separate accounts and administrators, so record who owns each before setup.</p>
-      <div class="review-card">
-        <h3>Google setup references</h3>
-        <ul class="source-list">
-          <li><a href="https://www.google.com/nonprofits/about/eligibility/">Google for Nonprofits eligibility and activation</a></li>
-          <li><a href="https://support.google.com/nonprofits/answer/60216?hl=en">Verify a domain for Google Workspace</a></li>
-          <li><a href="https://support.google.com/nonprofits/answer/9937746?hl=en">Google Workspace primary domain requirements</a></li>
-          <li><a href="https://support.google.com/nonprofits/answer/2858465?hl=en">Google Workspace for Nonprofits features</a></li>
-        </ul>
+      <div class="actions">
+        <a class="button secondary" href="https://4agc.com/" target="_blank" rel="noopener noreferrer">Review 4aGoodCause</a>
       </div>
-    </section>
-
-    <section class="review-section" aria-labelledby="backlog-title">
-      <p class="label">Work backlog</p>
-      <h2 id="backlog-title">Next work, in priority order</h2>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th scope="col">Priority</th><th scope="col">Work item</th><th scope="col">What is needed</th><th scope="col">Status</th></tr></thead>
-          <tbody>
-            <tr><td>1</td><td>Reconcile governance record</td><td>The board-approved packet is marked “INITIAL DRAFT - FOR BOARD REVIEW” and contains blank adoption, certification, meeting-reference, and finance-threshold fields. The project record notes Dane’s confirmation of board approval. Have the secretary align the file with the minutes or completed adoption record before publishing governance policies.</td><td>Secretary follow-up</td></tr>
-            <tr><td>2</td><td>Define active support scope</td><td>Identify which support areas are active, who may receive support, and what approval process and records are required.</td><td>Board review</td></tr>
-            <tr><td>3</td><td>Finish public contact and giving details</td><td>Provide an approved public email, donation process, sponsor information, and any public service-area or mailing details.</td><td>Information needed</td></tr>
-            <tr><td>4</td><td>Review 4aGoodCause fundraising platform</td><td>Look into <a href="https://4agc.com/">4aGoodCause</a>. Its website describes fundraising pages, event registration, peer-to-peer campaigns, recurring giving, donor accounts, CRM, and payment processing. Check current pricing and processing fees, payout timing, nonprofit eligibility, donor receipts, data handling, contract terms, and whether the features fit CWF before deciding.</td><td>Research only</td></tr>
-            <tr><td>5</td><td>Complete Gold Out fundraiser</td><td>Confirm the order form, sizes, event date, pickup details, payment instructions, and removal date for the notice.</td><td>Information needed</td></tr>
-            <tr><td>6</td><td>Verify meat raffle rules and ticket wording</td><td>Confirm the licensed eligible organization, license number, ticket and advertising requirements, sales process, and prize pickup wording. Verify that the online form is only a ticket request and matches the approved sales process. Keep the public copy independent and consistent with the licensed organizer and final ticket.</td><td>Board follow-up</td></tr>
-            <tr><td>7</td><td>Confirm public leadership names</td><td>The public page says “Edward Carter”; the governance packet uses “Eddie Carter.” Confirm the preferred public name and current officer list.</td><td>Confirm spelling</td></tr>
-            <tr><td>8</td><td>Publish simple impact reporting</td><td>After activities, share board-approved totals for funds raised and broad uses, plus opportunities supported. Obtain consent before using identifiable student photos.</td><td>After first reporting period</td></tr>
-            <tr><td>9</td><td>Choose a permanent domain</td><td>Select a domain when the board is ready to move from temporary GitHub Pages hosting and prepare for Workspace setup.</td><td>Board decision</td></tr>
-            <tr><td>10</td><td>Google Workspace eligibility and rollout</td><td>Follow the plan above after IRS recognition and domain selection. Confirm the application, assign account administrators, then set up and pilot the services CWF needs.</td><td>Blocked: IRS status and domain</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="closing" aria-labelledby="closing-title">
-      <h2 id="closing-title">After board review</h2>
-      <p>Record decisions through the board’s normal process. Confirm fundraiser wording, ticket details, and applicable requirements with the licensing authority before treating the event listing as final. This page does not collect or save board responses.</p>
     </section>
   </main>
-  <footer>
-    <div class="wrap">Crusader Wrestling Foundation · Board review copy</div>
-  </footer>
+  <footer><div class="wrap">Crusader Wrestling Foundation · Board working page · Last reviewed October 11, 2026</div></footer>
 </body>
 </html>
