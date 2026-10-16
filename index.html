@@ -385,15 +385,30 @@
     }
 
     .battle-fundraiser {
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    }
+
+    .battle-photo {
+      display: grid;
+      align-items: center;
+      padding: clamp(1rem, 3vw, 2rem);
+      background: var(--navy);
+    }
+
+    .battle-photo img {
       display: block;
+      width: min(100%, 450px);
+      height: auto;
+      margin-inline: auto;
+      box-shadow: 0 8px 24px rgb(12 35 63 / 18%);
     }
 
     .battle-content {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-      align-items: center;
-      gap: clamp(1.5rem, 4vw, 3rem);
-      padding: clamp(1.5rem, 4vw, 2.75rem);
+      grid-template-columns: 1fr;
+      align-content: center;
+      gap: 1.25rem;
+      padding: clamp(1.5rem, 3vw, 2.25rem);
     }
 
     .battle-content h3 { margin-bottom: 0.75rem; }
@@ -680,6 +695,9 @@
         padding: 1.25rem;
       }
 
+      .battle-photo { padding: 1rem; }
+      .battle-photo img { width: min(100%, 400px); }
+
       .battle-signup { padding: 1.25rem; }
 
       .mission {
@@ -812,6 +830,9 @@
         </div>
 
         <article class="fundraiser battle-fundraiser" aria-labelledby="battle-title">
+          <div class="battle-photo">
+            <img src="concession-fundraiser.jpg" alt="Concession fundraiser featuring popcorn, a soft drink, nachos, and a hot dog">
+          </div>
           <div class="battle-content">
             <div>
               <p class="eyebrow">Community fundraiser</p>
