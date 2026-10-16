@@ -384,6 +384,58 @@
       box-shadow: 0 12px 32px rgb(12 35 63 / 8%);
     }
 
+    .battle-fundraiser {
+      display: block;
+    }
+
+    .battle-banner {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .battle-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+      align-items: center;
+      gap: clamp(1.5rem, 4vw, 3rem);
+      padding: clamp(1.5rem, 4vw, 2.75rem);
+    }
+
+    .battle-content h3 { margin-bottom: 0.75rem; }
+
+    .battle-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1.25rem;
+    }
+
+    .battle-detail {
+      padding: 0.65rem 0.85rem;
+      border: 1px solid #ded9cd;
+      border-top: 3px solid var(--gold);
+      background: var(--paper);
+      color: var(--navy);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .battle-signup {
+      padding: 1.5rem;
+      border-left: 4px solid var(--gold);
+      background: var(--paper);
+    }
+
+    .battle-signup h4 {
+      margin: 0 0 0.65rem;
+      color: var(--navy);
+      font-size: 1.25rem;
+    }
+
+    .battle-signup p { color: var(--muted); }
+    .battle-signup .button { width: 100%; }
+
     .fundraiser-art {
       display: grid;
       align-content: center;
@@ -628,6 +680,14 @@
         padding: 1.5rem;
       }
 
+      .battle-content {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 1.25rem;
+      }
+
+      .battle-signup { padding: 1.25rem; }
+
       .mission {
         font-size: 1.2rem;
       }
@@ -756,6 +816,28 @@
           <h2 id="support-title">Fundraisers &amp; support priorities</h2>
           <p class="section-lead">Take part in a current fundraiser or see how community support can help with equipment and training, tournament travel, meals, lodging, and team activities.</p>
         </div>
+
+        <article class="fundraiser battle-fundraiser" aria-labelledby="battle-title">
+          <img class="battle-banner" src="battle-in-burg-homecoming.jpg" alt="Battle for the Burg homecoming game: McDevitt versus Harrisburg, Saturday, October 24, with noon kickoff">
+          <div class="battle-content">
+            <div>
+              <p class="eyebrow">Game-day fundraiser</p>
+              <h3 id="battle-title">Battle in the Burg concession</h3>
+              <p class="fundraiser-lead">Help CWF make the concession a success during McDevitt vs. Harrisburg. Choose a volunteer shift or bring a food item. Every helping hand makes game day run more smoothly and supports CWF.</p>
+              <div class="battle-details" aria-label="Game-day details">
+                <span class="battle-detail"><time datetime="2026-10-24">Saturday, October 24</time></span>
+                <span class="battle-detail">Gates open at 11 a.m.</span>
+                <span class="battle-detail">Kickoff at noon</span>
+              </div>
+            </div>
+            <aside class="battle-signup" aria-label="Concession volunteer signup">
+              <p class="eyebrow">Pick what works for you</p>
+              <h4>Can you lend a hand?</h4>
+              <p>Sign up for a setup, grill, serving, or cashier shift, or choose a food item to donate. Even one shift or one item helps.</p>
+              <a class="button" href="https://www.timetosignup.com/legionhairstudio/sheet/1297186" target="_blank" rel="noopener noreferrer">Choose a shift or food item</a>
+            </aside>
+          </div>
+        </article>
 
         <article class="fundraiser" aria-labelledby="fundraiser-title">
           <div class="fundraiser-art shirt-art">
