@@ -391,13 +391,18 @@
       display: grid;
       grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
       gap: clamp(1.5rem, 4vw, 3rem);
-      margin-bottom: 2.5rem;
+      margin-bottom: 0;
       overflow: hidden;
       border: 1px solid #ded9cd;
       border-top: 5px solid var(--gold);
       background: var(--white);
       color: var(--ink);
       box-shadow: 0 12px 32px rgb(12 35 63 / 8%);
+    }
+
+    .fundraiser-list {
+      display: grid;
+      gap: 2rem;
     }
 
     .battle-fundraiser {
@@ -803,6 +808,7 @@
           <p class="section-lead">Take part in a current fundraiser or see how community support can help with equipment and training, tournament travel, meals, lodging, and team activities.</p>
         </div>
 
+        <div class="fundraiser-list">
         <article class="fundraiser battle-fundraiser" aria-labelledby="battle-title">
           <div class="battle-photo">
             <img src="concession-fundraiser.jpg" alt="Concession fundraiser featuring popcorn, a soft drink, nachos, and a hot dog">
@@ -853,6 +859,7 @@
 
           </div>
         </article>
+        </div>
 
         <div class="priorities">
           <article class="priority">
