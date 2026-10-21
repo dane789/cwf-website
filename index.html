@@ -489,6 +489,11 @@
 
     .raffle-date strong { font-size: 1.1rem; letter-spacing: normal; }
 
+    .raffle-actions {
+      align-items: center;
+      margin-top: 1.25rem;
+    }
+
     .raffle-ticket-note {
       margin: 1.1rem 0 0;
       padding: 0.9rem 1rem;
@@ -499,6 +504,14 @@
 
     .raffle-ticket-note strong { color: var(--navy); }
 
+    .raffle-actions .button:focus-visible { outline-color: var(--navy); }
+
+    .raffle-watch {
+      color: var(--navy);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-underline-offset: 0.2em;
+    }
 
     .fundraiser-art img {
       display: block;
@@ -824,7 +837,10 @@
                 <span class="battle-detail">Kickoff at noon</span>
               </div>
             </div>
-            <aside class="battle-signup" aria-labelcle class="fundraiser" aria-labelledby="fundraiser-title">
+          </div>
+        </article>
+
+        <article class="fundraiser" aria-labelledby="fundraiser-title">
           <div class="fundraiser-art shirt-art">
             <img src="gold-out-shirt-portrait.jpg" alt="Vegas gold Crusaders wrestling shirt shown beneath the “Built on Tradition. Worn with Pride.” design">
             <p class="fundraiser-caption">Gold Out shirt design</p>
@@ -856,7 +872,6 @@
             </div>
             <p class="small"><strong>Drawing:</strong> <time datetime="2026-12-16T17:00:00-05:00">Wednesday, December 16, 2026 at 5 p.m.</time></p>
             <p class="raffle-ticket-note"><strong>Tickets are sold directly by participating wrestlers.</strong> Contact a wrestler to purchase a $10 ticket.</p>
-
           </div>
         </article>
         </div>
@@ -967,3 +982,4 @@
   </footer>
 </body>
 </html>
+
