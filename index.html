@@ -982,27 +982,5 @@
       <span>Faith · Opportunity · Leadership</span>
     </div>
   </footer>
-  <dialog class="access-dialog" id="board-access-dialog" aria-labelledby="board-access-title">
-    <form id="board-access-form">
-      <h2 id="board-access-title">Board review</h2>
-      <p>Enter the board access password to continue.</p>
-      <label for="board-access-code">Password</label>
-      <input id="board-access-code" name="password" type="password" autocomplete="off" required>
-      <p class="error" id="board-access-error" role="status" aria-live="polite"></p>
-      <div class="actions">
-        <button class="button" type="submit">Open page</button>
-        <button class="button button-outline" id="board-access-cancel" type="button">Cancel</button>
-      </div>
-    </form>
-  </dialog>
-  <script>
-    const boardAccessButton = document.getElementById("board-access");
-    const boardAccessDialog = document.getElementById("board-access-dialog");
-    const boardAccessForm = document.getElementById("board-access-form");
-    const boardAccessCode = document.getElementById("board-access-code");
-    const boardAccessError = document.getElementById("board-access-error");
-
-    boardAccessButton.addEventListener("click", () => {
-      boardAccessError.textContent = "";
-      boardAccessCode.value = "";
-      boardAccessDialog.showModal(
+</body>
+</html>
