@@ -611,37 +611,6 @@
       gap: 1.25rem;
     }
 
-    .board-access {
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: #ced6df;
-      font: inherit;
-      text-decoration: underline;
-      text-underline-offset: 0.2em;
-      cursor: pointer;
-    }
-
-    .board-access:hover { color: var(--white); }
-
-    .access-dialog {
-      width: min(420px, calc(100% - 2rem));
-      padding: 1.5rem;
-      border: 2px solid var(--gold);
-      background: var(--paper);
-      color: var(--ink);
-    }
-
-    .access-dialog::backdrop { background: rgb(12 35 63 / 70%); }
-    .access-dialog h2 { margin-bottom: .5rem; color: var(--navy); font-size: 1.5rem; }
-    .access-dialog p { color: var(--muted); }
-    .access-dialog label { display: block; margin-bottom: .35rem; font-weight: 700; }
-    .access-dialog input { width: 100%; padding: .75rem; border: 1px solid #9aa4ae; font: inherit; }
-    .access-dialog .actions { margin: 1rem 0 0; }
-    .access-dialog .button { min-width: 6rem; }
-    .access-dialog .button-outline { border-color: var(--navy); color: var(--navy); }
-    .access-dialog .error { min-height: 1.5em; margin: .5rem 0 0; color: #8a2525; font-size: .875rem; }
-
     @media (max-width: 760px) {
       .site-nav {
         align-items: flex-start;
@@ -1011,7 +980,6 @@
       <span>Crusader Wrestling Foundation · Independent Pennsylvania nonprofit corporation</span>
       <a href="#contact">Contact</a>
       <span>Faith · Opportunity · Leadership</span>
-      <button class="board-access" id="board-access" type="button" aria-haspopup="dialog">Board review</button>
     </div>
   </footer>
   <dialog class="access-dialog" id="board-access-dialog" aria-labelledby="board-access-title">
@@ -1037,24 +1005,4 @@
     boardAccessButton.addEventListener("click", () => {
       boardAccessError.textContent = "";
       boardAccessCode.value = "";
-      boardAccessDialog.showModal();
-      boardAccessCode.focus();
-    });
-
-    document.getElementById("board-access-cancel").addEventListener("click", () => {
-      boardAccessDialog.close();
-    });
-
-    boardAccessForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      if (boardAccessCode.value === "cwfboard") {
-        window.location.href = "board-review.html";
-        return;
-      }
-
-      boardAccessError.textContent = "That password did not match. Please try again.";
-      boardAccessCode.select();
-    });
-  </script>
-</body>
-</html>
+      boardAccessDialog.showModal(
