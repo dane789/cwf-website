@@ -25,3 +25,4 @@ GitHub Pages serves the repository root from the `main` branch.
 - Do not publish the EIN, personal addresses, or private officer contact details without explicit approval for public use.
 - Public contact: info@crusaderwrestling.org. Public location: Harrisburg, Pennsylvania. Domain crusaderwrestling.org is registered with Cloudflare and GitHub Pages is configured for `www.crusaderwrestling.org`. HTTPS is enforced; HTTP requests and both bare-domain variants redirect to `https://www.crusaderwrestling.org/`. Email activation is still separate and pending.
 - Add donation instructions and sponsorship details only after they are confirmed and approved for public use.
+- Keep board records in the restricted CWF Drive archive. Do not add board-review pages or internal board material to this public repository.
