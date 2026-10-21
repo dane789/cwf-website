@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="favicon.png?v=3">
-  <meta name="description" content="Crusader Wrestling Foundation supports student-athletes with training, equipment, tournament travel, and team activities. See current priorities and volunteer roles.">
+  <meta name="description" content="Crusader Wrestling Foundation is an independent, IRS-recognized 501(c)(3) public charity in Harrisburg, Pennsylvania, supporting wrestling student-athletes.">
   <title>Crusader Wrestling Foundation | Built on the Mat. Ready for Life.</title>
   <style>
     :root {
@@ -313,6 +313,22 @@
 
     .governance { background: #eeece4; }
     .governance-intro { max-width: 800px; }
+
+    .contact { background: var(--white); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .contact-card {
+      padding: 1.25rem;
+      border-top: 3px solid var(--gold);
+      background: var(--paper);
+    }
+    .contact-card h3 { margin-bottom: 0.5rem; color: var(--navy); }
+    .contact-card p { margin-bottom: 0; }
+    .contact-card a { color: var(--navy); font-weight: 700; overflow-wrap: anywhere; }
 
     .officers {
       display: grid;
@@ -659,7 +675,8 @@
       }
 
       .priorities,
-      .roles {
+      .roles,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
@@ -763,6 +780,7 @@
         <a href="#support">Fundraisers</a>
         <a href="#governance">Leadership</a>
         <a href="#involved">Get involved</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -928,7 +946,31 @@
           <article class="officer"><h3>Aimee Miller</h3><p>Treasurer</p></article>
           <article class="officer"><h3>Yvonne Aguayo</h3><p>Secretary</p></article>
         </div>
-        <p class="small status-note"><strong>Tax status:</strong> The foundation has applied for recognition under section 501(c)(3). The IRS has not made a determination yet. Until then, we cannot confirm that contributions are tax-deductible.</p>
+        <p class="small status-note"><strong>Tax status:</strong> The IRS recognized Crusader Wrestling Foundation as a tax-exempt 501(c)(3) public charity, effective September 22, 2026. Contributions are deductible as permitted by law.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Organization information</p>
+          <h2 id="contact-title">Contact Crusader Wrestling Foundation</h2>
+          <p class="section-lead">Crusader Wrestling Foundation is an independent Pennsylvania nonprofit supporting wrestling student-athletes and programs.</p>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>IRS-recognized public charity</h3>
+            <p>Recognized under Section 501(c)(3), effective September 22, 2026. Contributions are deductible as permitted by law.</p>
+          </article>
+          <article class="contact-card">
+            <h3>Based in</h3>
+            <p>Harrisburg, Pennsylvania</p>
+          </article>
+          <article class="contact-card">
+            <h3>Get in touch</h3>
+            <p><a href="mailto:info@crusaderwrestling.org">info@crusaderwrestling.org</a></p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -967,6 +1009,7 @@
   <footer>
     <div class="wrap">
       <span>Crusader Wrestling Foundation · Independent Pennsylvania nonprofit corporation</span>
+      <a href="#contact">Contact</a>
       <span>Faith · Opportunity · Leadership</span>
       <button class="board-access" id="board-access" type="button" aria-haspopup="dialog">Board review</button>
     </div>
