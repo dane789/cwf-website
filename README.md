@@ -23,5 +23,5 @@ GitHub Pages serves the repository root from the `main` branch.
 - Keep CWF presented as an independent organization. Do not imply school affiliation or publish school-specific fundraising, payment, or team contact details.
 - CWF is an independent Pennsylvania nonprofit corporation recognized by the IRS as a tax-exempt 501(c)(3) public charity, effective September 22, 2026. Keep public tax wording consistent with the determination letter.
 - Do not publish the EIN, personal addresses, or private officer contact details without explicit approval for public use.
-- Public contact: info@crusaderwrestling.org. Public location: Harrisburg, Pennsylvania. Domain crusaderwrestling.org is registered with Cloudflare and GitHub Pages DNS records are configured; DNS validation and HTTPS certificate provisioning are pending. Email activation is still separate and pending.
+- Public contact: info@crusaderwrestling.org. Public location: Harrisburg, Pennsylvania. Domain crusaderwrestling.org is registered with Cloudflare and GitHub Pages is configured for `www.crusaderwrestling.org`. HTTPS is enforced; HTTP requests and both bare-domain variants redirect to `https://www.crusaderwrestling.org/`. Email activation is still separate and pending.
 - Add donation instructions and sponsorship details only after they are confirmed and approved for public use.
